@@ -3,19 +3,27 @@ import {FirstComponent} from './first';
 import { render } from '@testing-library/react';
 import {Form} from './form';
 
-const liste = [
-  "ilk eleman",
-  "ikinci eleman",
-  "ucuncu eleman",
-  "dorduncu eleman"
-];
 
 class App extends Component {
 
+  constructor(){
+    super();
+
+    this.state = {liste:[
+      "ilk eleman",
+      "ikinci eleman",
+      "ucuncu eleman",
+      "dorduncu eleman"
+    ]};
+
+    this.listeyeEkle = this.listeyeEkle.bind(this);
+  }
 
   listeyeEkle(val){
-    liste.push(val);
-    console.log(liste);
+    let geciciListe = this.state.liste;
+    geciciListe.push(val);
+    this.setState({liste:geciciListe});
+
   }
 
   render(){
@@ -26,7 +34,7 @@ class App extends Component {
     <div>
      ilk kodlar
      <br/>
-     <FirstComponent ilkprop={prop_sabiti} ilk_list = {liste}></FirstComponent>
+     <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
      <br/>
      <Form yeniListe={this.listeyeEkle}></Form>
     </div>
