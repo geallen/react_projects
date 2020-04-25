@@ -13,7 +13,7 @@ export class FirstComponent extends React.Component{
             <div>Ilk Component<br/>
                 {this.props.ilkprop}
                 <br/>
-                {veriler}
+                <ul>{veriler}</ul>
             </div>
         );
     }
