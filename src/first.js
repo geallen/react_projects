@@ -4,7 +4,7 @@ export class FirstComponent extends React.Component{
     render(){
         const veriler=this.props.ilk_list.map((element, index) =>{
             return (
-                <li>
+                <li key={index}>
                     {index+1}.element = {element}
                 </li>
             )
