@@ -6,7 +6,7 @@ export class Counter extends React.Component{
         return(
             <div>
                 <button onClick={this.props.arttir}>Arttir</button>
-                <h3>Yeni deger : {this.props.sayi}</h3>
+                <h3 style={{color:"red", fontSize:"20px"}}>Yeni deger : {this.props.sayi}</h3>
             </div>
         );
     }
