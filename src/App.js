@@ -40,7 +40,7 @@ class App extends Component {
    
 
   return (
-    <div>
+    <div className="container">
      ilk kodlar
      <br/>
      <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
