@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import {Form} from './components/form';
 import {Person} from './components/person';
 import {Counter} from './components/counter';
+import Navbar from './components/navbar';
 
 class App extends Component {
 
@@ -41,17 +42,19 @@ class App extends Component {
 
   return (
     <div className="container">
-     ilk kodlar
-     <br/>
-     <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
-     <br/>
-     <Form yeniListe={this.listeyeEkle}></Form>
-     <br/>
-    <Person name="Gamze"/>
-    <br/>
-    <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
-
-  
+      ilk kodlar
+      <br/>
+      <Navbar/>
+      <br/>
+      <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
+      <br/>
+      <Form yeniListe={this.listeyeEkle}></Form>
+      <br/>
+      <Person name="Gamze"/>
+      <br/>
+      <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
+      <br/>
+      
     </div>
   );
 }
