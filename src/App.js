@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {FirstComponent} from './first';
+import {FirstComponent} from './components/first';
 import { render } from '@testing-library/react';
-import {Form} from './form';
-import {Person} from './person';
-import {Counter} from './counter';
+import {Form} from './components/form';
+import {Person} from './components/person';
+import {Counter} from './components/counter';
 
 class App extends Component {
 
