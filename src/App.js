@@ -5,6 +5,7 @@ import {Form} from './components/form';
 import {Person} from './components/person';
 import {Counter} from './components/counter';
 import Navbar from './components/navbar';
+import Celebrity from './components/celebrity';
 
 class App extends Component {
 
@@ -54,7 +55,7 @@ class App extends Component {
       <br/>
       <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
       <br/>
-      
+      <Celebrity name="Monica Geller" movie="Friends" age="28"/>
     </div>
   );
 }
