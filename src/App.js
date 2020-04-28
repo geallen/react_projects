@@ -44,7 +44,7 @@ class App extends Component {
     <div className="container">
       ilk kodlar
       <br/>
-      <Navbar/>
+      <Navbar title="First React App"/>
       <br/>
       <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
       <br/>
