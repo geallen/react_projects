@@ -16,10 +16,9 @@ export default class celebrity extends React.Component {
             isVisible : false
         }
 
-        this.onClickName = this.onClickName.bind(this);
     }
  
-    onClickName(e){
+    onClickName = (e) => {
         this.setState({ isVisible : true})
     }
 
