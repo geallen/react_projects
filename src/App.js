@@ -45,7 +45,7 @@ class App extends Component {
     <div className="container">
       ilk kodlar
       <br/>
-      <Navbar title="First React App"/>
+      <Navbar/>
       <br/>
       <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
       <br/>
@@ -56,6 +56,7 @@ class App extends Component {
       <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
       <br/>
       <Celebrity name="Monica Geller" movie="Friends" age="28"/>
+      <Celebrity name="John Locke" movie="Lost" age="43"/>
     </div>
   );
 }
