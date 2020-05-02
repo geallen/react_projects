@@ -18,8 +18,8 @@ export default class celebrity extends React.Component {
 
     }
  
-    onClickName = (e) => {
-        this.setState({ isVisible : true})
+    onClickName = (e) =>{
+        this.setState({ isVisible : !this.state.isVisible})
     }
 
     render(){
