@@ -5,7 +5,7 @@ import {Form} from './components/form';
 import {Person} from './components/person';
 import {Counter} from './components/counter';
 import Navbar from './components/navbar';
-import Celebrity from './components/celebrity';
+import Celebritys from './components/celebritys';
 
 class App extends Component {
 
@@ -18,7 +18,27 @@ class App extends Component {
       "ucuncu eleman",
       "dorduncu eleman"
     ],
-    counter : 0
+    counter : 0,
+    users : [
+      {
+        id: 1,
+        name : "Monica Geller",
+        movie : "Friends",
+        age : "28"
+      },
+      {
+        id: 2,
+        name : "John Locke",
+        movie : "Lost",
+        age : "43"
+      },
+      {
+        id: 3,
+        name : "Ted Mosby",
+        movie : "HIMYM",
+        age : "35"
+      }
+    ]
   };
 
     this.listeyeEkle = this.listeyeEkle.bind(this);
@@ -55,8 +75,7 @@ class App extends Component {
       <br/>
       <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
       <br/>
-      <Celebrity name="Monica Geller" movie="Friends" age="28"/>
-      <Celebrity name="John Locke" movie="Lost" age="43"/>
+      <Celebritys users = {this.state.users}/>
     </div>
   );
 }
