@@ -57,6 +57,12 @@ class App extends Component {
     this.setState({counter : this.state.counter +1});
   } 
 
+  deleteUser = (id) => {
+    this.setState({
+      users : this.state.users.filter( user => id != user.id)
+    })
+  }
+
   render(){
     const prop_sabiti = "Ilk prop sabiti";
    
@@ -75,7 +81,7 @@ class App extends Component {
       <br/>
       <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
       <br/>
-      <Celebritys users = {this.state.users}/>
+      <Celebritys deleteUser = {this.deleteUser}  users = {this.state.users}/>
     </div>
   );
 }

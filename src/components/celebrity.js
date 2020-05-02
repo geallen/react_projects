@@ -22,6 +22,11 @@ export default class celebrity extends React.Component {
         this.setState({ isVisible : !this.state.isVisible})
     }
 
+    deleteUserOnClick = (e) =>{
+        const {id, deleteUser} = this.props;
+        deleteUser(id);
+    }
+
     render(){
     const {name, movie, age} = this.props;
 
@@ -31,7 +36,7 @@ export default class celebrity extends React.Component {
             <div className="card">
                 <div className="card-header d-flex justify-content-between">
                     <h4 className="d-inline" onClick= {this.onClickName}>{name}</h4>
-                    <i className="far fa-trash-alt" style={{cursor:"pointer"}}></i>
+                    <i className="far fa-trash-alt" onClick= {this.deleteUserOnClick}  style={{cursor:"pointer"}}></i>
                 </div>
 
                 { isVisible ? 
@@ -50,6 +55,7 @@ export default class celebrity extends React.Component {
 celebrity.prototypes = {
     name : PropTypes.string.isRequired,
     movie : PropTypes.string.isRequired,
-    age : PropTypes.string.isRequired
+    age : PropTypes.string.isRequired,
+    deleteUser : PropTypes.func.isRequired
 }
 

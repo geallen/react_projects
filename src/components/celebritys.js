@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import Celebrity from './celebrity';
+import PropTypes from 'prop-types'
+
 
 export default class celebritys extends React.Component {
     render() {
-        const {users} = this.props;
+        const {users, deleteUser} = this.props;
 
         return (
             <div>
@@ -12,13 +14,20 @@ export default class celebritys extends React.Component {
                         return (
                             <Celebrity 
                                 key = {celebrity.id}
-                                name={celebrity.name}
-                                movie={celebrity.movie}
-                                age={celebrity.age} />
+                                id = {celebrity.id}
+                                name = {celebrity.name}
+                                movie = {celebrity.movie}
+                                age = {celebrity.age} 
+                                deleteUser = {deleteUser} />
                         )
                     })
                 }
             </div>
         )
     }
+}
+
+celebritys.prototypes = {
+    users : PropTypes.array.isRequired,
+    deleteUser : PropTypes.func.isRequired
 }
