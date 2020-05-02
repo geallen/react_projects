@@ -23,8 +23,8 @@ export default class celebrity extends React.Component {
     }
 
     deleteUserOnClick = (e) =>{
-        const {id, deleteUser} = this.props;
-        deleteUser(id);
+        const {id} = this.props;
+       
     }
 
     render(){
@@ -55,7 +55,6 @@ export default class celebrity extends React.Component {
 celebrity.prototypes = {
     name : PropTypes.string.isRequired,
     movie : PropTypes.string.isRequired,
-    age : PropTypes.string.isRequired,
-    deleteUser : PropTypes.func.isRequired
+    age : PropTypes.string.isRequired
 }
 
