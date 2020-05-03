@@ -41,7 +41,7 @@ export default class celebrity extends React.Component {
                 
                 return (
                     <div className="col-md-8 mb-4">
-                        <div className="card">
+                        <div className="card" style={isVisible ? {backgroundColor: '#B0BEC5', color: 'white'} : null}>
                             <div className="card-header d-flex justify-content-between">
                                 <h4 className="d-inline" onClick= {this.onClickName}>{name}</h4>
                                 <i className="far fa-trash-alt" onClick= {this.deleteUserOnClick.bind(this, dispatch)}  style={{cursor:"pointer"}}></i>
