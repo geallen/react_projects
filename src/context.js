@@ -2,6 +2,18 @@ import React, { Component } from 'react'
 
 const CelebrityContext = React.createContext();
 
+const reducer = (state, action) => {
+  switch(action.type){
+    case "DELETE_USER":
+      return {
+        ...state,
+        users: state.users.filter(user => action.payload != user.id)
+      }
+    default:
+      return state
+  }
+}
+
 export class CelebrityProvider extends Component {
     state = {
         users : [
@@ -23,7 +35,10 @@ export class CelebrityProvider extends Component {
               movie : "HIMYM",
               age : "35"
             }
-          ]
+          ],
+          dispatch : action => {
+            this.setState(state => reducer(state, action))
+          }
     }
     render() {
         return (

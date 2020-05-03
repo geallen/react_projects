@@ -9,7 +9,6 @@ export default class celebritys extends React.Component {
                 {
                     value => {
                         const {users} = value;
-                        console.log("users"+ users);
                         return (
                             <div>
                                 {
