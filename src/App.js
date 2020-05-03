@@ -5,6 +5,8 @@ import {Person} from './components/person';
 import {Counter} from './components/counter';
 import Navbar from './components/navbar';
 import Celebritys from './components/celebritys';
+import AddCelebrity from './components/addCelebrity';
+
 
 class App extends Component {
 
@@ -45,6 +47,8 @@ class App extends Component {
       ilk kodlar
       <br/>
       <Navbar/>
+      <br/>
+      <AddCelebrity></AddCelebrity>
       <br/>
       <FirstComponent ilkprop={prop_sabiti} ilk_list = {this.state.liste}></FirstComponent>
       <br/>
