@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 const CelebrityContext = React.createContext();
 
@@ -7,12 +7,20 @@ const reducer = (state, action) => {
     case "DELETE_USER":
       return {
         ...state,
-        users: state.users.filter(user => action.payload != user.id)
+        users: state.users.filter(user => action.payload !== user.id)
       }
     case "ADD_USER":
         return {
           ...state,
           users: [...state.users, action.payload]
+      }
+    case "UPDATE_USER":
+      let index = action.payload.id;
+      state.users.find(user => user.id === index).age = action.payload.age;
+      state.users.find(user => user.id === index).movie = action.payload.movie;
+
+      return {
+        ...state
       }
     default:
       return state
