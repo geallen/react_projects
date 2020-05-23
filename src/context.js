@@ -22,6 +22,9 @@ const reducer = (state, action) => {
       return {
         ...state
       }
+
+    case "TOGGLE":
+      return { ...state, isAFrog : !state.isAFrog};
     default:
       return state
   }
@@ -49,6 +52,7 @@ export class CelebrityProvider extends Component {
               age : "35"
             }
           ],
+          isAFrog : false,
           dispatch : action => {
             this.setState(state => reducer(state, action))
           }

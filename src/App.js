@@ -6,7 +6,7 @@ import {Counter} from './components/counter';
 import Navbar from './components/navbar';
 import Celebritys from './components/celebritys';
 import AddCelebrity from './components/addCelebrity';
-
+import Frogs from './components/frogs';
 
 class App extends Component {
 
@@ -59,6 +59,8 @@ class App extends Component {
       <Counter arttir={this.increment} sayi={this.state.counter}></Counter>
       <br/>
       <Celebritys></Celebritys>
+      <br/>
+      <Frogs></Frogs>
     </div>
   );
 }
